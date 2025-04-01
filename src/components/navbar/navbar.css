@@ -1,0 +1,145 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    padding: 20px 12.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: #0ef;
+}
+
+/* body{
+    background: #020410;
+} */
+
+.active{
+    color: #081b29 !important;
+}
+.active::after{
+    background-color: #081b29 !important;
+}
+
+.deactive{
+    color: white;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 3vw;
+}
+
+.navbar a:hover{
+    color: #081b29;
+}
+.navbar a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    border-radius: 5px;
+    transform: translateX(0px);
+    transition: .5s;
+}
+
+
+.navbar a:hover::before{
+    width: 100%;
+    opacity: 1;
+    background-color: #081b29;
+}
+
+
+.search-bar{
+    width: 250px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    padding-left: 10px;
+}
+
+.search-bar input::placeholder{
+    color: white;
+}
+
+.search-bar button{
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.search-bar button i{
+    font-size: 22px;
+    color: white;
+}
+
+
+.signupbtn, .loginbtn{
+    position: relative;
+    color: white;
+    border: 2px solid white;
+    /* background: transparent; */
+    background: #0ef;
+    padding: 10px 30px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 400;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* .auth-buttons button:hover{
+    background-color: #081b29;
+    transform: translateX(0px);
+} */
+
+.signupbtn::before, .loginbtn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transform-origin: right;
+    transition: transform .5s ease;
+    transform: translateX(100%);
+}
+
+
+.signupbtn:hover::before, .loginbtn:hover::before{
+    transform-origin: left;
+    width: 100%;
+    transition: transform .5s ease;
+    transform: translateX(0);
+}

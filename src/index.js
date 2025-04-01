@@ -1,13 +1,59 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './App.js';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './components/home/home.js';
+import Signup from './components/signup/signup.js';
+import Login from './components/login/login.js';
+import About from './components/about/about.js';
+import Services from './components/servieces/services.js';
+import Contact from './components/contact/contact.js';
+import TodoForm from './components/todoForm/todoForm.js';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        path: "",
+        element: <Home />,
+      },
+      {
+        path: "signup",
+        element: <Signup />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "services",
+        element: <Services />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "addtodo",
+        element: <TodoForm />,
+      },
+      
+    ]
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

@@ -1,0 +1,284 @@
+.wrapper-signup{
+    background-color: aqua;
+    color: white;
+    position: relative;
+    width: 750px;
+    height: 550px;
+    background: transparent;
+    border: 2px solid #0ef;
+    overflow: hidden;
+    box-shadow: 0 0 25px #0ef;
+}
+
+.wrapper-signup .form-box{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper-signup .form-box.login{
+    left: 0;
+    padding: 0 60px 0 40px;
+}
+
+.wrapper-signup .form-box.login .animation{
+    transform: translateX(0);
+    transition: .7s ease;
+}
+
+.wrapper-signup.active .form-box.login .animation{
+    transform: translateX(-120%);
+}
+
+.wrapper-signup .form-box.register{
+    right: 0;
+    padding: 0 40px 0 60px;
+}
+
+.form-box h2{
+    font-size: 32px;
+    color: white;
+    text-align: center;
+
+}
+
+.form-box .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    margin: 25px 0;
+
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    padding-right: 23px;
+    transition: .5s;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-bottom-color: #0ef;
+}
+
+
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+    color: #0ef;
+
+}
+
+.input-box i{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.input-box input:focus~i,
+.input-box input:valid~i {
+    color: #0ef;
+}
+
+.btn{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #0ef;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    z-index: -1;
+    background: linear-gradient(#081b29, #0ef, #081b29, #0ef);
+    transition: .5s;
+}
+
+.btn:hover:before{
+    top: 0;
+}
+
+.form-box .logreg-link{
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    margin: 20px 0 10px;
+
+}
+
+.logreg-link p a{
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.logreg-link p a:hover{
+    text-decoration: underline;
+
+}
+
+
+.wrapper-signup .info-text{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.wrapper-signup .info-text.login{
+    right: 0;
+    text-align: right;
+    padding: 0 40px 60px 150px;
+}
+
+.wrapper-signup .info-text.register{
+    left: 0;
+    text-align: left;
+    padding: 0 150px 60px 40px;
+}
+
+
+.info-text p{
+    font-size: 16px;
+    color: white;
+
+}
+
+.wrapper-signup .bg-animate{
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 850px;
+    height: 600px;
+    background: linear-gradient(45deg, #081b29, #0ef);
+    border-bottom: 3px solid #0ef;
+    transform: rotate(10deg) skewY(40deg);
+    transform: rotate(0) skewY(0);
+    transform-origin: bottom right;
+}
+
+.wrapper-signup .bg-animate2{
+    position: absolute;
+    top: 100%;
+    left: 250px;
+    width: 850px;
+    height: 1000px;
+    background: linear-gradient(-45deg, #081b29, #0ef);
+    border-top: 3px solid #0ef;
+    transform: rotate(-11deg) skewY(-41deg);
+    /* transform: rotate(0) skewY(0); */
+    transform-origin: bottom left;
+}
+
+
+
+
+
+
+
+
+/*  */
+
+
+#userImgDiv{
+    position: relative;
+    height: 50%;
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#userImgDiv.signUpPageImage{
+    height: 40%;
+}
+
+#userImgDiv.inputfile{
+    height: 20%;
+}
+
+#userImgDiv img{
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+}
+
+.signUpPageImage{
+    width: 100%;
+    opacity: 1;
+}
+.signUpPageImage:hover{
+    cursor: pointer;
+}
+
+
+
+.inputfile{
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    display: none;    
+}
+
+.signUpPageImage:hover + .inputfile{
+    display: block;
+    cursor: pointer;
+}
