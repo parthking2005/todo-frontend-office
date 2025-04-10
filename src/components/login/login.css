@@ -218,3 +218,37 @@
     transform-origin: bottom right;
 }
 
+
+
+/*  */
+#userImgDiv2{
+    position: relative;
+    height: 50%;
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#userImgDiv2.inputfile{
+    height: 20%;
+}
+
+/* #userImgDiv2 img{
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+}  */
+
+
+.image-login{
+    /* height: max-content;
+    width: max-content; */
+    object-fit: contain;
+    width: 100%;
+    border-radius: 50%;
+}

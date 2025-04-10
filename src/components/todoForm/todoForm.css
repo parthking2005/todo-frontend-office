@@ -1,0 +1,129 @@
+/* General Body Styling */
+
+/* Container Styling */
+.todo-form-container {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 239, 255, 0.6);
+    /* text-align: center; */
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    /* position: absolute; */
+    /* top: 100px; */
+}
+
+/* Heading Styling */
+h2 {
+    margin-bottom: 20px;
+    color: #0ef;
+    font-size: 1.5rem;
+}
+
+/* Form Input & Textarea Styling */
+.todo-title-form, .todo-content-form {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 2px solid #0ef;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Glow Effect on Hover for Input & Textarea */
+.todo-title-form:hover, .todo-content-form:hover {
+    box-shadow: 0 0 15px rgba(0, 239, 255, 0.8);
+}
+
+/* Button Styling */
+.submit-btn {
+    background-color: #0ef;
+    color: #081B29;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glow Effect on Hover for Button */
+.submit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(0, 239, 255, 1);
+}
+
+/* Responsive Styling for Smaller Screens (Mobile) */
+@media (max-width: 600px) {
+    .todo-form-container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .todo-title-form, .todo-content-form {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Styling for Tablet Screens */
+@media (max-width: 768px) {
+    .todo-form-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .todo-title-form, .todo-content-form {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .submit-btn {
+        padding: 12px 18px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+    .todo-form-container {
+        max-width: 500px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .todo-title-form, .todo-content-form {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .submit-btn {
+        padding: 12px 20px;
+        font-size: 1.1rem;
+    }
+}
+
+.beauty-image{
+    width: 100%;
+}

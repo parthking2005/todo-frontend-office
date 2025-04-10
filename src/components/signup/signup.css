@@ -72,6 +72,7 @@
 .input-box input:focus,
 .input-box input:valid {
     border-bottom-color: #0ef;
+    background: transparent;
 }
 
 
@@ -251,7 +252,6 @@
 }
 
 #userImgDiv img{
-    border-radius: 50%;
     height: fit-content;
     width: fit-content;
 }
@@ -259,9 +259,6 @@
 .signUpPageImage{
     width: 100%;
     opacity: 1;
-}
-.signUpPageImage:hover{
-    cursor: pointer;
 }
 
 
@@ -273,12 +270,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 2;
-    opacity: 0;
-    display: none;    
-}
-
-.signUpPageImage:hover + .inputfile{
-    display: block;
     cursor: pointer;
+    z-index: 2;
+    opacity: 0; 
 }
